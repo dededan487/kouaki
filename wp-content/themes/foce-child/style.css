@@ -1,0 +1,99 @@
+/*
+ Theme Name:  Fleurs d'orangers et chats errants - Oscars Short
+ Theme URI: https://www.koukaki.local
+ Author: Studio Koukaki
+ Author URI: https://www.koukaki.local
+ Template: foce
+ Description: Thème enfant à l'ocasion de la nomination aux Oscars Shorts
+ Version: 0.1
+ */
+
+
+
+.fade {
+  opacity: 0;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fade {
+  opacity: 0;
+  animation: fade-in 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+  /* l'opacité reste à 1 après l'animation */
+  animation-delay: 0.5s;
+  /*ajoute un délai avant le démarrage de l'animation */
+}
+
+/* rotation fleurs*/
+.story__article::after, 
+.story h2::after,
+#studio h2::before,  
+#studio h2::after,
+.site-footer::before,
+.site-footer::after,
+.site-footer ul::after {
+  animation: rotate-flowers 10s infinite linear;
+  /* Ajoute l'animation de rotation non stop */
+}
+
+@keyframes rotate-flowers {
+  from {
+    transform: rotate(0deg);
+    /* Rotation de départ */
+  }
+
+  to {
+    transform: rotate(360deg);
+    /* Rotation complète */
+  }
+}
+
+
+/***********************************/
+/*cacher initialement les éléments auxquels elle est appliquée*/
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* afficher les éléments en transition*/
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 1s;
+}
+
+/*******************************/
+/*section-finale des oscars*/
+.finale{
+  isplay: flex;
+  ustify-content: space-around;
+
+}
+
+.oscars{
+  display: flex;
+  justify-content: center;
+
+}
+
+.img_oscars {
+  width: 20%;
+
+}
+.nomination  {
+  background-size: cover;
+  text-shadow: 2px 2px 4px #797676;
+  font-size:22px;
+  background-image: url("/wp-content/themes/foce/assets/images/orange_characters_bg.png");
+}
+
