@@ -4,14 +4,16 @@ get_header();
 ?>
 
 <main id="primary" class="site-main">
-
-    <section class="banner fade show">
-        <?php get_template_part('parts/background-video'); ?>
-        <img src="/wp-content/themes/foce/assets/images/banner.png" alt="Fallback Image" id="banner-img">
-    </section>
-
-    <div id="parallax-container'">
-        <img src="/wp-content/themes/foce/assets/images/logo.png" >
+    <div class="parallax-container">
+        <div class="parallax-section">
+            <section class="banner fade show banner1">
+                <?php get_template_part('parts/background-video'); ?>
+                <img src="/wp-content/themes/foce/assets/images/banner.png" alt="Fallback Image" id="banner-img">
+            </section>
+        </div>
+        <div class="parallax-title">
+            <img src="/wp-content/themes/foce/assets/images/logo.png" alt="image de fond">
+        </div>
     </div>
 
 
