@@ -57,7 +57,6 @@
   }
 }
 
-
 /***********************************/
 /*cacher initialement les éléments auxquels elle est appliquée*/
 .reveal {
@@ -74,26 +73,27 @@
 
 /*******************************/
 /*section-finale des oscars*/
-.finale{
-  isplay: flex;
-  ustify-content: space-around;
-
-}
-
 .oscars{
   display: flex;
   justify-content: center;
-
 }
 
 .img_oscars {
   width: 20%;
-
 }
 .nomination  {
-  background-size: cover;
   text-shadow: 2px 2px 4px #797676;
   font-size:22px;
   background-image: url("/wp-content/themes/foce/assets/images/orange_characters_bg.png");
 }
+
+/************************/
+.banner img{
+  border: 55px solid blue;
+  display: none;
+}
+
+
+/*************************/
+
 

@@ -4,9 +4,18 @@ get_header();
 ?>
 
 <main id="primary" class="site-main">
+
     <section class="banner fade show">
-        <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
+        <?php get_template_part('parts/background-video'); ?>
+        <img src="/wp-content/themes/foce/assets/images/banner.png" alt="Fallback Image" id="banner-img">
     </section>
+
+    <div id="parallax-container'">
+        <img src="/wp-content/themes/foce/assets/images/logo.png" >
+    </div>
+
+
+
     <section id="#story" class="story fade show">
         <h2>
             <div class="reveal">L'histoire</div>
@@ -58,8 +67,6 @@ get_header();
 
         </article>
     </section>
-
-
     <section id="studio" class="fade show">
         <h2>
             <div class="reveal">Studio Koukaki </div>
@@ -72,6 +79,5 @@ get_header();
     
     <?php get_template_part('parts/section_finale'); ?>
 </main><!-- #main -->
-
 <?php
 get_footer();

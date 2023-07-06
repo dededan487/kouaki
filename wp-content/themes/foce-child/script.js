@@ -1,4 +1,3 @@
-console.log("Hello, World!")
 /*utilisation de API Intersection Observer *
 */
 
@@ -31,5 +30,5 @@ document.querySelectorAll('.reveal').forEach(function (r) {
 })
 
 
-//************************************/
 
+/*********************** */
