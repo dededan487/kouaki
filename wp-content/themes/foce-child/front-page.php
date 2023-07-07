@@ -4,20 +4,17 @@ get_header();
 ?>
 
 <main id="primary" class="site-main">
-    <div class="parallax-container">
+    <section class="parallax-container">
         <div class="parallax-section">
-            <section class="banner fade show banner1">
+            <div class="banner fade show banner1">
                 <?php get_template_part('parts/background-video'); ?>
                 <img src="/wp-content/themes/foce/assets/images/banner.png" alt="Fallback Image" id="banner-img">
-            </section>
+            </div>
         </div>
         <div class="parallax-title">
             <img src="/wp-content/themes/foce/assets/images/logo.png" alt="image de fond">
         </div>
-    </div>
-
-
-
+    </section>
     <section id="#story" class="story fade show">
         <h2>
             <div class="reveal">L'histoire</div>
@@ -36,31 +33,30 @@ get_header();
         $characters_query = new WP_Query($args);
         ?>
         <article id="characters">
-            <div class="main-character">
-                <h3>Les personnages</h3>
-                <?php
-                $main_character = $characters_query->posts[0];
-                echo '<figure>';
-                echo get_the_post_thumbnail($main_character->ID, 'full');
-                echo '<figcaption>' . $main_character->post_title . '</figcaption>';
-                echo '</figure>';
-                $characters_query->next_post();
-                ?>
+        <!--IMPOSSIBLE A CHARGER AVEC TEMPLATE-PARTS--------->
+            <div class="swiper mySwiper007">
+                <h3>Les personnages</h3> <!-- Titre de la section -->
+                <div class="swiper-wrapper">
+                    <?php
+                    while ($characters_query->have_posts()) { // Boucle pour chaque élément
+                        $characters_query->the_post();
+                        echo '<div class="swiper-slide">'; // Début de la diapositive Swiper
+                        echo '<figure>'; // Début de la figure
+                        echo get_the_post_thumbnail(get_the_ID(), 'full'); // Affichage de l'image mise en avant
+                        echo '<figcaption>'; // Début de la légende
+                        the_title(); // Affichage du titre
+                        echo '</figcaption>'; // Fin de la légende
+                        echo '</figure>'; // Fin de la figure
+                        echo '</div>'; // Fin de la diapositive Swiper
+                    }
+                    ?>
+                </div>
+                <div class="swiper-pagination"></div> <!-- Pagination Swiper -->
             </div>
-            <div class="other-characters">
-                <?php
-                while ($characters_query->have_posts()) {
-                    $characters_query->the_post();
-                    echo '<figure>';
-                    echo get_the_post_thumbnail(get_the_ID(), 'full');
-                    echo '<figcaption>';
-                    the_title();
-                    echo '</figcaption>';
-                    echo '</figure>';
-                }
-                ?>
-            </div>
+            <!-------------------------------------------------->
         </article>
+
+
         <article id="place">
             <div>
                 <h3>Le Lieu</h3>
@@ -78,8 +74,9 @@ get_header();
             <p>Avec une créativité et une capacité d’innovation mondialement reconnues, une expertise éditoriale et commerciale à la pointe de son industrie, le Studio Koukaki se positionne comme un acteur incontournable dans un marché en forte croissance. Koukaki construit chaque année de véritables succès et capitalise sur de puissantes marques historiques. Cette année, il vous présente “Fleurs d’oranger et chats errants”.</p>
         </div>
     </section>
-    
+
     <?php get_template_part('parts/section_finale'); ?>
 </main><!-- #main -->
+
 <?php
 get_footer();

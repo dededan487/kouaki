@@ -31,12 +31,7 @@ function theme_enqueue_video()
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_video');
 
-// Ajouter les scripts pour le thème
-function theme_enqueue_scripts1()
-{
-    wp_enqueue_script('jquery');
-}
-add_action('wp_enqueue_scripts', 'theme_enqueue_scripts1');
+
 
 // Ajouter les styles pour parallax
 function theme_enqueue_parallax()
@@ -45,6 +40,19 @@ function theme_enqueue_parallax()
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_parallax');
 
+// initialisation de Swipper
+
+function enqueue_swiper_assets() {
+    // Enqueue Swiper CSS
+    wp_enqueue_style('swiper', 'https://unpkg.com/swiper@10/swiper-bundle.min.css', array(), '10.0.0');
+
+    // Enqueue Swiper JS
+    wp_enqueue_script('swiper', get_template_directory_uri() . '-child/scripts_enfant/swiper-bundle.min.js', array(), '10.0.0', true);
+
+    // Enqueue custom swiper script
+    wp_enqueue_script('custom-swiper', get_template_directory_uri() . '-child/scripts_enfant/swiper_script.js', array('swiper'), '1.0.0', true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_swiper_assets');
 
 
 // Récupérer les options du customizer du thème parent
