@@ -32,3 +32,17 @@
     display: block;
     width: 100%;
   }
+
+  /*********nuage****/
+
+  #grd_nuage,
+  #ptit_nuage {
+    transform: translateY(-50%);
+    transition: transform 0.3s ease, filter 0.3s ease; /* Ajoutez la transition du filtre */
+    filter: blur(15px); /* Appliquez un flou aux nuages */
+  }
+  .bloc_nuages{
+    position: absolute;
+    left: 55%;
+    bottom: 25%;
+  }

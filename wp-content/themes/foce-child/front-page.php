@@ -55,14 +55,16 @@ get_header();
             </div>
             <!-------------------------------------------------->
         </article>
-
-
-        <article id="place">
+        <article id="place">          
             <div>
                 <h3>Le Lieu</h3>
                 <p><?php echo get_theme_mod('place'); ?></p>
             </div>
-
+            <div class="bloc_nuages">   
+                 <img src="/wp-content/themes/foce-child/images/big_cloud.png" alt="grand nuage" class="nuages" id="grd_nuage">
+                 <img src="/wp-content/themes/foce-child/images/little_cloud.png" alt="petit nuage" class="nuages" id="ptit_nuage">
+            </div>
+            
         </article>
     </section>
     <section id="studio" class="fade show">

@@ -87,6 +87,9 @@
   background-image: url("/wp-content/themes/foce/assets/images/orange_characters_bg.png");
 }
 
-
+/* changgement de fond article #place*/
+.story #place{
+  background-image: url("images/Studio_Koukaki-image_place.png");
+}
 
 

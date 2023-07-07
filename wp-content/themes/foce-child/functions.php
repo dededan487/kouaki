@@ -65,3 +65,10 @@ if (get_stylesheet() !== get_template()) {
         return get_option('theme_mods_' . get_template(), $default);
     });
 }
+
+
+function theme_enqueue_scripts2() {
+    // Enregistrer le fichier jquery_nuage.js
+    wp_enqueue_script('jquery-nuage', get_stylesheet_directory_uri() . '/scripts_enfant/jquery_nuage_parallax.js', array('jquery'), '1.0', true);
+}
+add_action('wp_enqueue_scripts', 'theme_enqueue_scripts2');
