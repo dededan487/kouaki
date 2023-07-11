@@ -1,0 +1,61 @@
+/* Styles pour le menu fullscreen */
+#overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	display: none;
+	z-index: 9999;
+}
+
+#fullscreen-menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #fff;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease, visibility 0.3s ease;
+	z-index: 9998;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#fullscreen-menu.open {
+	opacity: 1;
+	visibility: visible;
+}
+
+#fullscreen-menu ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+#fullscreen-menu ul li {
+	margin-bottom: 20px;
+}
+
+#fullscreen-menu ul li a {
+	display: block;
+	padding: 10px;
+	color: #000;
+	text-decoration: none;
+	transition: background-color 0.3s ease;
+}
+
+#fullscreen-menu ul li a:hover {
+	background-color: #f0f0f0;
+}
+
+#site-navigation{
+	display: none;
+	border: 5px solid red;
+}

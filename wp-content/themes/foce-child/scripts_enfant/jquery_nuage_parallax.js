@@ -1,8 +1,6 @@
 
   (function($) {
     $(document).ready(function() {
-      // Votre code jQuery ici
-      // ...
   
       // Fonction de mouvement des nuages
       function parallaxClouds() {

@@ -26,21 +26,20 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'foce' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<nav id="site-navigation" class="main-navigation">
-        <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-
-            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </button>
-
-            <ul>
-                <li><a href="#story">Histoire</a></li>
-                <li><a href="#characters">Personnages</a></li>
-                <li><a href="#place">Lieu</a></li>
-                <li><a href="#studio">Studio Koukaki</a></li>
-            </ul>
-
-		</nav><!-- #site-navigation -->
+	<nav id="barre-navigation" class="main-navigation">
+    <!--<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>-->
+    <div class="burger-menu">
+        <div class="bar bar1"></div>
+        <div class="bar bar2"></div>
+        <div class="bar bar3"></div>
+    </div>
+    <div class="fullscreen-menu">
+        <ul>
+            <li><a href="#">Thème 1</a></li>
+            <li><a href="#">Thème 2</a></li>
+            <li><a href="#">Thème 3</a></li>
+            <li><a href="#">Thème 4</a></li>
+        </ul>
+    </div>
+</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->

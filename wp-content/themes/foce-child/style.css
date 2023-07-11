@@ -10,7 +10,7 @@
 
 
 
-.fade {
+ .fade {
   opacity: 0;
 }
 
@@ -90,6 +90,5 @@
 /* changgement de fond article #place*/
 .story #place{
   background-image: url("images/Studio_Koukaki-image_place.png");
+  background-size: cover;
 }
-
-
