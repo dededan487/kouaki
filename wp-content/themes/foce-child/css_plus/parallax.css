@@ -22,19 +22,19 @@
     color: #fff; 
     animation: floatTitle 6s infinite ease-in-out; /* Appliquez l'animation de flottement au titre avec une durée de 6 secondes, en boucle infinie et avec une fonction d'assouplissement 'ease-in-out' */
   }
-  /* Ajoutez les keyframes pour l'animation de flottement */
+  /* Ajoute les keyframes pour l'animation de flottement */
   @keyframes floatTitle {
     0%, 100% { /* Au début et à la fin de l'animation */
       transform: translate(-50%, -50%); /*le titre est centré horizontalement et verticalement par rapport à l'élément parent*/
     }
     25% { /* À 25% de l'animation */
-      transform: translate(-55%, -50%); /*  le titre est déplacé de 10% vers la gauche */
+      transform: translate(-55%, -50%); /*  le titre est déplacé de 5% vers la gauche */
     }
     50% { /* À 50% de l'animation */
-      transform: translate(-50%, -55%); /*  le titre est déplacé de 10% vers le haut. */
+      transform: translate(-50%, -55%); /*  le titre est déplacé de 5% vers le haut. */
     }
     75% { /* À 75% de l'animation */
-      transform: translate(-45%, -50%); /* le titre est déplacé de 10% vers la droite */
+      transform: translate(-45%, -50%); /* le titre est déplacé de 5% vers la droite */
     }
   }
   

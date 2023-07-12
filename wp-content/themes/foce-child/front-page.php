@@ -28,12 +28,10 @@ get_header();
             'posts_per_page' => -1,
             'meta_key'  => '_main_char_field',
             'orderby'   => 'meta_value_num',
-
         );
         $characters_query = new WP_Query($args);
         ?>
         <article id="characters">
-        <!--IMPOSSIBLE A CHARGER AVEC TEMPLATE-PARTS--------->
             <div class="swiper mySwiper007">
                 <h3>Les personnages</h3> <!-- Titre de la section -->
                 <div class="swiper-wrapper">

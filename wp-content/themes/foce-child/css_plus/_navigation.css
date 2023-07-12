@@ -1,64 +1,188 @@
+.site-title {
+  background-color: #FFD5A2;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: 100%;
+  text-align: center;
+  line-height: 250%;
+  font-size: 34px !important;
+}
+
 /* Burger menu */
 .burger-menu {
-    display: block;
-    cursor: pointer;
-    position: relative;
-    left: 90%;
-    top: 20%;
-    z-index: 1001;
+  display: block;
+  cursor: pointer;
+  position: relative;
+  left: 90%;
+  top: 20%;
+  z-index: 1001;
+}
 
+/* Barres du burger menu */
+.burger-menu .bar {
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotation de la première barre */
+.burger-menu.change .bar1 {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+/* Disparition de la deuxième barre */
+.burger-menu.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotation de la troisième barre */
+.burger-menu.change .bar3 {
+  transform: rotate(45deg) translate(-9px, -6px);
+}
+
+/* Styles du menu fullscreen */
+.fullscreen-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  background-color: #edb36b;
+  width: 100%;
+  max-width: 1440px;
+  overflow: hidden;
+
+}
+
+.fullscreen-menu ul {
+  list-style-type: none;
+  padding: 0;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fullscreen-menu ul li {
+  position: relative;
+  font-size: 500%;
+}
+
+.fullscreen-menu ul li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 55%;
+  position: relative;
+  z-index: 1;
+}
+
+.fullscreen-menu ul li a:hover {
+  background-color: rgba(255, 165, 0, 0.8);
+  /* Couleur orange avec fond flou */
+  backdrop-filter: blur(5px);
+  /* Appliquer un flou sur le fond */
+}
+
+/*************images du menus animation************/
+#orchid {
+  position: absolute;
+  top: 20%;
+  left: -5%;
+  max-block-size: 20%;
+  animation: rotate-flowers 10s infinite linear;
+}
+
+#rando {
+  position: absolute;
+  top: 40%;
+  right: -3%;
+  max-block-size: 10%;
+  animation: rotate-flowers 10s infinite linear;
+}
+
+#flo {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  max-block-size: 10%;
+  animation: rotate-flowers 10s infinite linear;
+}
+
+#hibis {
+  position: absolute;
+  bottom: -20%;
+  right: -12%;
+  max-block-size: 40%;
+  animation: rotate-flowers 10s infinite linear;
+}
+
+#sunflo {
+  position: absolute;
+  top: 15%;
+  right: 20%;
+  max-block-size: 20%;
+  animation: rotate-flowers 10s infinite linear;
+}
+
+#img-logo {
+  position: relative;
+  max-block-size: 10%;
+}
+
+#chat-green {
+  position: absolute;
+  right: 20%;
+  bottom: 25%;
+  max-block-size: 10%;
+  transform: translate(-50%, -50%);
+  animation: floatTitle 6s infinite ease-in-out;
+
+}
+
+#chat-violet {
+  position: absolute;
+  left: 20%;
+  max-block-size: 10%;
+  animation: floatTitle 5s infinite ease-in-out;
+
+}
+
+#chat-orange {
+  position: absolute;
+  left: 20%;
+  bottom: 10%;
+  max-block-size: 10%;
+  animation: floatTitle 4s infinite ease-in-out;
+}
+
+@keyframes floatTitle {
+
+  0%,
+  100% {
+    /* Au début et à la fin de l'animation */
+    transform: translate(-50%, -50%);
+    /*le titre est centré horizontalement et verticalement par rapport à l'élément parent*/
   }
-  
-  /* Barres du burger menu */
-  .burger-menu .bar {
-    width: 30px;
-    height: 4px;
-    background-color: #333;
-    margin: 6px 0;
-    transition: 0.4s;
+
+  25% {
+    /* À 25% de l'animation */
+    transform: translate(-70%, -50%);
+    /*  le titre est déplacé de 20% vers la gauche */
   }
-  
-  /* Rotation de la première barre */
-  .burger-menu.change .bar1 {
-    transform: rotate(-45deg) translate(-9px, 6px);
+
+  50% {
+    /* À 50% de l'animation */
+    transform: translate(-70%, -60%);
+    /*  le titre est déplacé de 20% vers le haut. */
   }
-  
-  /* Disparition de la deuxième barre */
-  .burger-menu.change .bar2 {
-    opacity: 0;
+
+  75% {
+    /* À 75% de l'animation */
+    transform: translate(-45%, -50%);
+    /* le titre est déplacé de 10% vers la droite */
   }
-  
-  /* Rotation de la troisième barre */
-  .burger-menu.change .bar3 {
-    transform: rotate(45deg) translate(-9px, -6px);
-  }
-  
-  /* Styles du menu fullscreen */
-  .fullscreen-menu {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    background-color: #FFD5A2;
-  }
-  
-  .fullscreen-menu ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .fullscreen-menu ul li {
-    margin: 20px 0;
-  }
-  
-  .fullscreen-menu ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 24px;
-  }
+}
