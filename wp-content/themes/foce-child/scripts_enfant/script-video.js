@@ -20,5 +20,5 @@ window.addEventListener("load", function() {
     
     // Charger la vidéo source
     video.load();
-  }, 10000); // 10 secondes (30000 millisecondes)
+  }, 10000); // 10 secondes de delais avant chargement
 });

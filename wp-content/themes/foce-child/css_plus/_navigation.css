@@ -1,63 +1,69 @@
-.site-title {
-  background-color: #FFD5A2;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  width: 100%;
-  text-align: center;
-  line-height: 250%;
-  font-size: 34px !important;
+/* Positionnement absolu de la classe ".main-tittle" */
+.main-tittle {
+  position: absolute;
 }
 
-/* Burger menu */
+/* Style pour les classes ".site-title" et ".main-tittle" */
+.site-title,
+.main-tittle {
+  background-color: #FFD5A2; /* Couleur de fond orange pâle */
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 250%; /* Hauteur de ligne de 250% */
+  font-size: 34px !important; /* Taille de police de 34 pixels (importante) */
+}
+
+/* Menu burger */
 .burger-menu {
   display: block;
   cursor: pointer;
   position: relative;
-  left: 90%;
-  top: 20%;
+  left: 90%; /* Décalage de 90% par rapport à la gauche */
+  top: 30%; /* Décalage de 30% par rapport au haut */
   z-index: 1001;
 }
 
-/* Barres du burger menu */
+/* Barres du menu burger */
 .burger-menu .bar {
   width: 30px;
   height: 4px;
-  background-color: #333;
-  margin: 6px 0;
-  transition: 0.4s;
+  background-color: #333; /* Couleur des barres */
+  margin: 6px 0; /* Marge de 6 pixels en haut et en bas */
+  transition: 0.4s; /* Transition de 0,4 seconde */
 }
 
-/* Rotation de la première barre */
-.burger-menu.change .bar1 {
-  transform: rotate(-45deg) translate(-9px, 6px);
+/* Animation de rotation de la première barre lors du changement du menu burger */
+.burger-menu.change .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-9px, 6px); /* Rotation et translation */
 }
 
-/* Disparition de la deuxième barre */
-.burger-menu.change .bar2 {
-  opacity: 0;
+/* Disparition de la deuxième barre lors du changement du menu burger */
+.burger-menu.change .bar:nth-child(2) {
+  opacity: 0; /* Opacité à 0 */
 }
 
-/* Rotation de la troisième barre */
-.burger-menu.change .bar3 {
-  transform: rotate(45deg) translate(-9px, -6px);
+/* Animation de rotation de la troisième barre lors du changement du menu burger */
+.burger-menu.change .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-9px, -6px); /* Rotation et translation */
 }
 
-/* Styles du menu fullscreen */
+/* Style pour le menu en plein écran */
 .fullscreen-menu {
   display: none;
   position: fixed;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 90%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 1000;
-  background-color: #edb36b;
-  width: 100%;
-  max-width: 1440px;
+  background: #FFF5E9; /* Fond blanc cassé */
+  border: 1px solid #f8c990; /* Bordure avec couleur */
+  max-width: 1440px; /* Largeur maximale de 1440 pixels */
   overflow: hidden;
-
 }
 
 .fullscreen-menu ul {
@@ -69,120 +75,137 @@
 
 .fullscreen-menu ul li {
   position: relative;
-  font-size: 500%;
+  font-size: 500%; /* Taille de police de 500% */
 }
 
 .fullscreen-menu ul li a {
-  color: #000;
+  color: #000; /* Couleur du texte en noir */
   text-decoration: none;
-  font-size: 55%;
+  font-size: 55%; /* Taille de police de 55% */
   position: relative;
   z-index: 1;
 }
 
 .fullscreen-menu ul li a:hover {
-  background-color: rgba(255, 165, 0, 0.8);
-  /* Couleur orange avec fond flou */
-  backdrop-filter: blur(5px);
-  /* Appliquer un flou sur le fond */
+  /* Au survol du lien */
+  text-shadow: #FF5C00 1px 0 5px; /* Ombre de texte orange */
 }
 
-/*************images du menus animation************/
-#orchid {
+/* Images d'animation du menu */
+#orchid,
+#rando,
+#flo,
+#hibis,
+#sunflo {
   position: absolute;
+  animation: rotate-flowers 10s infinite linear;
+}
+
+#orchid {
   top: 20%;
   left: -5%;
   max-block-size: 20%;
-  animation: rotate-flowers 10s infinite linear;
 }
 
 #rando {
-  position: absolute;
   top: 40%;
   right: -3%;
   max-block-size: 10%;
-  animation: rotate-flowers 10s infinite linear;
 }
 
 #flo {
-  position: absolute;
   top: 50%;
   left: 20%;
   max-block-size: 10%;
-  animation: rotate-flowers 10s infinite linear;
 }
 
 #hibis {
-  position: absolute;
   bottom: -20%;
   right: -12%;
   max-block-size: 40%;
-  animation: rotate-flowers 10s infinite linear;
 }
 
 #sunflo {
-  position: absolute;
   top: 15%;
   right: 20%;
   max-block-size: 20%;
-  animation: rotate-flowers 10s infinite linear;
 }
 
+/* Images d'animation du menu */
 #img-logo {
   position: relative;
   max-block-size: 10%;
 }
 
-#chat-green {
+/* Animation floatTitle */
+#chat-green,
+#chat-violet,
+#chat-orange {
   position: absolute;
+  max-block-size: 10%;
+  animation: floatTitle 6s infinite ease-in-out;
+}
+
+#chat-green {
   right: 20%;
   bottom: 25%;
-  max-block-size: 10%;
   transform: translate(-50%, -50%);
-  animation: floatTitle 6s infinite ease-in-out;
-
 }
 
 #chat-violet {
-  position: absolute;
   left: 20%;
-  max-block-size: 10%;
-  animation: floatTitle 5s infinite ease-in-out;
-
 }
 
 #chat-orange {
-  position: absolute;
   left: 20%;
   bottom: 10%;
-  max-block-size: 10%;
-  animation: floatTitle 4s infinite ease-in-out;
 }
 
 @keyframes floatTitle {
-
-  0%,
-  100% {
+  0%, 100% {
     /* Au début et à la fin de l'animation */
-    transform: translate(-50%, -50%);
-    /*le titre est centré horizontalement et verticalement par rapport à l'élément parent*/
+    transform: translate(-50%, -50%); /* Centré horizontalement et verticalement */
   }
-
   25% {
     /* À 25% de l'animation */
-    transform: translate(-70%, -50%);
-    /*  le titre est déplacé de 20% vers la gauche */
+    transform: translate(-70%, -50%); /* Déplacement de 20% vers la gauche */
   }
-
   50% {
     /* À 50% de l'animation */
-    transform: translate(-70%, -60%);
-    /*  le titre est déplacé de 20% vers le haut. */
+    transform: translate(-70%, -60%); /* Déplacement de 20% vers le haut */
   }
-
   75% {
     /* À 75% de l'animation */
-    transform: translate(-45%, -50%);
-    /* le titre est déplacé de 10% vers la droite */
+    transform: translate(-45%, -50%); /* Déplacement de 10% vers la droite */
+  }
+}
+
+/* Media queries pour les écrans de petite taille */
+@media (max-width: 700px) {
+  .fullscreen-menu {
+    height: 50%; /* Hauteur de 50% */
+  }
+
+  .main-navigation ul {
+    display: flex; /* Affichage en tant que flex */
+  }
+
+  #page {
+    margin-top: -30%; /* Marge supérieure de -30% */
+  }
+
+  .parallax-container {
+    margin-bottom: -40%; /* Marge inférieure de -40% */
+  }
+
+  #characters {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .site-title,
+  .main-tittle {
+   
+    font-size: inherit !important; /* Taille de police héritée */
   }
 }

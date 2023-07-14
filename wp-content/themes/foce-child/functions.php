@@ -14,7 +14,9 @@ function theme_enqueue_styles()
     // Ajouter les styles pour le menu burger
     wp_enqueue_style('menu-style', get_template_directory_uri() . '-child/css_plus/_navigation.css');
 
-    
+    // Enqueue Swiper CSS
+    wp_enqueue_style('swiper', 'https://unpkg.com/swiper@10/swiper-bundle.min.css', array(), '10.0.0');
+
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 
@@ -22,46 +24,32 @@ add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 // Ajouter les scripts et styles pour le thème
 function theme_enqueue_scripts()
 {
-    // Ajouter jQuery
+    // Ajout jQuery
     wp_enqueue_script('jquery');
 
-    // Ajouter jquery_parallax.js avec une dépendance à jQuery
+    // Ajout jquery_parallax.js avec une dépendance à jQuery
     wp_enqueue_script('jquery-parallax', get_stylesheet_directory_uri() . '/scripts_enfant/jquery_parallax.js', array('jquery'), '1.0', true);
 
-    // Ajouter custom-script pour la fonctionnalité vidéo
+    // Ajout custom-script pour la fonctionnalité vidéo
     wp_enqueue_script('custom-script', get_stylesheet_directory_uri() . '/scripts_enfant/script-video.js', array(), '1.0', true);
 
-    // Ajouter mon-script avec une dépendance à jQuery
-    wp_enqueue_script('mon-script', get_stylesheet_directory_uri() . '/script.js', array('jquery'), '1.0', true);
+    // Ajout mon-script avec une dépendance à jQuery
+    wp_enqueue_script('mon-script', get_stylesheet_directory_uri() . '/scripts_enfant/script.js', array('jquery'), '1.0', true);
 
-     // Ajouter custom-script pour le menu
+    // Ajout menu-script pour le menu
     wp_enqueue_script('menu-script', get_stylesheet_directory_uri() . '/scripts_enfant/menu.js', array(), '1.0', true);
-
-}
-add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');
-
-
-
-// initialisation de Swipper
-function enqueue_swiper_assets()
-{
-    // Enqueue Swiper CSS
-    wp_enqueue_style('swiper', 'https://unpkg.com/swiper@10/swiper-bundle.min.css', array(), '10.0.0');
 
     // Enqueue Swiper JS
     wp_enqueue_script('swiper', get_template_directory_uri() . '-child/scripts_enfant/swiper-bundle.min.js', array(), '10.0.0', true);
 
     // Enqueue custom swiper script
     wp_enqueue_script('custom-swiper', get_template_directory_uri() . '-child/scripts_enfant/swiper_script.js', array('swiper'), '1.0.0', true);
-}
-add_action('wp_enqueue_scripts', 'enqueue_swiper_assets');
 
-function theme_enqueue_scripts2()
-{
     // Enregistrer le fichier jquery_nuage.js
     wp_enqueue_script('jquery-nuage', get_stylesheet_directory_uri() . '/scripts_enfant/jquery_nuage_parallax.js', array('jquery'), '1.0', true);
 }
-add_action('wp_enqueue_scripts', 'theme_enqueue_scripts2');
+
+add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');
 
 // Récupérer les options du customizer du thème parent
 if (get_stylesheet() !== get_template()) {

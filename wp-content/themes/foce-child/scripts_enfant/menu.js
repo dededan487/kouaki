@@ -28,4 +28,6 @@ document.addEventListener("DOMContentLoaded", function() {
       fullscreenMenu.style.display = 'none';
       // Modifie la propriété "display" de "fullscreenMenu" pour la mettre à "none" et masquer le menu
   });
+  console.log("Le menu est en cours de chargement");
 });
+

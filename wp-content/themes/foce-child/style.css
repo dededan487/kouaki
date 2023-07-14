@@ -8,19 +8,34 @@
  Version: 0.1
  */
 
+body {
+  background: rgb(255, 255, 255);
 
+}
 
- .fade {
+section, footer{
+  background: #FFF5E9;
+  z-index: 1;
+}
+
+.main-navigation {
+  margin-top: -5%;
+}
+/**********utilisation de API Intersection Observer */
+.fade {
   opacity: 0;
+  /* Opacité initiale de 0 */
 }
 
 @keyframes fade-in {
   from {
     opacity: 0;
+    /* Opacité initiale de 0 */
   }
 
   to {
     opacity: 1;
+    /* Opacité finale de 1 */
   }
 }
 
@@ -28,15 +43,16 @@
   opacity: 0;
   animation: fade-in 0.5s ease-in-out;
   animation-fill-mode: forwards;
-  /* l'opacité reste à 1 après l'animation */
+  /* L'opacité reste à 1 après l'animation */
   animation-delay: 0.5s;
-  /*ajoute un délai avant le démarrage de l'animation */
+  /* Ajout délai avant le démarrage de l'animation */
 }
 
+
 /* rotation fleurs*/
-.story__article::after, 
+.story__article::after,
 .story h2::after,
-#studio h2::before,  
+#studio h2::before,
 #studio h2::after,
 .site-footer::before,
 .site-footer::after,
@@ -44,7 +60,6 @@
   animation: rotate-flowers 10s infinite linear;
   /* Ajoute l'animation de rotation non stop */
 }
-
 @keyframes rotate-flowers {
   from {
     transform: rotate(0deg);
@@ -73,7 +88,7 @@
 
 /*******************************/
 /*section-finale des oscars*/
-.oscars{
+.oscars {
   display: flex;
   justify-content: center;
 }
@@ -81,14 +96,20 @@
 .img_oscars {
   width: 20%;
 }
-.nomination  {
+
+.nomination {
   text-shadow: 2px 2px 4px #797676;
-  font-size:22px;
+  font-size: 22px;
   background-image: url("/wp-content/themes/foce/assets/images/orange_characters_bg.png");
 }
 
 /* changgement de fond article #place*/
-.story #place{
+.story #place {
   background-image: url("images/Studio_Koukaki-image_place.png");
   background-size: cover;
+}
+
+#studio {
+  overflow: hidden;
+  margin-top: 0px;
 }

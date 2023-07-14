@@ -27,15 +27,16 @@
     <div id="page" class="site">
         <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'foce'); ?></a>
         <header id="masthead" class="site-header">
-            <nav id="barre-navigation" class="main-navigation">
-                <div class="burger-menu">
+        <h1 class="main-tittle"><?php bloginfo('name'); ?></h1>
+            <nav id="barre-navigation" class="main-navigation"> 
+                <div class="burger-menu"><!-- nouveau menu-->
                     <div class="bar bar1"></div>
                     <div class="bar bar2"></div>
                     <div class="bar bar3"></div>
                 </div>
 
-                <div class="fullscreen-menu">
-                    <h1 class="site-title"><?php bloginfo('name'); ?></h1>
+                <div class="fullscreen-menu"> <!-- menu pleine page-->
+                    <h1 class="site-title"><?php bloginfo('name'); ?></h1> <!--titre page-->
                     <img src="/wp-content/themes/foce/assets/images/logo.png" alt="logo" id="img-logo">
 
                     <div class="img-menu">
@@ -51,7 +52,6 @@
                         <img src="/wp-content/themes/foce-child/images/cat.png" alt="chat orange" id="chat-orange">
                     </div>
                     <ul>
-
                         <li><a href="#story">Histoire</a></li>
                         <li><a href="#characters">Personnages</a></li>
                         <li><a href="#place">Lieu</a></li>
@@ -60,4 +60,4 @@
                     <p class="studio-contact">STUDIO CONTACT</p>
                 </div>
             </nav><!-- #site-navigation -->
-        </header><!-- #masthead -->
+        </header>

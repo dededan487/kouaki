@@ -11,16 +11,8 @@
 }
 
 @media (max-width: 768px) {
-  #background-video, #banner-img{
-    display: none !important;
-    border: 3px solid blue;
-  }
-
-  .banner {
-    background-image: url("/wp-content/themes/foce/assets/images/banner.png"); /* Définir votre image de fond */
-    background-size: cover;
-  }
  
+
   .story #place {
     background-image: url("/wp-content/themes/foce/assets/images/place_bg.png") !important;
     background-size: cover;

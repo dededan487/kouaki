@@ -1,9 +1,8 @@
-<!--IMPOSSIBLE A CHARGER AVEC TEMPLATE-PARTS--------->
 <div class="swiper mySwiper007">
         <h3>Les personnages</h3> <!-- Titre de la section -->
         <div class="swiper-wrapper">
             <?php
-            while ($characters_query->have_posts()) { // Boucle pour chaque élément
+            while ($characters_query->have_posts()) { // Boucle pour chaque chat
                 $characters_query->the_post();
                 echo '<div class="swiper-slide">'; // Début de la diapositive Swiper
                 echo '<figure>'; // Début de la figure
