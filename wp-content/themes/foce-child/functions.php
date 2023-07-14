@@ -6,13 +6,13 @@ function theme_enqueue_styles()
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
 
     // Ajouter les styles pour la vidéo
-    wp_enqueue_style('video-style', get_template_directory_uri() . '-child/css_plus/video.css');
+    wp_enqueue_style('video-style', get_template_directory_uri() . '-child/css_plus/video.scss');
 
     // Ajouter les styles pour parallax
-    wp_enqueue_style('parallax-style', get_template_directory_uri() . '-child/css_plus/parallax.css');
+    wp_enqueue_style('parallax-style', get_template_directory_uri() . '-child/css_plus/parallax.scss');
 
     // Ajouter les styles pour le menu burger
-    wp_enqueue_style('menu-style', get_template_directory_uri() . '-child/css_plus/_navigation.css');
+    wp_enqueue_style('menu-style', get_template_directory_uri() . '-child/css_plus/_navigation.scss');
 
     // Enqueue Swiper CSS
     wp_enqueue_style('swiper', 'https://unpkg.com/swiper@10/swiper-bundle.min.css', array(), '10.0.0');
