@@ -52,11 +52,11 @@ section, footer{
 /* rotation fleurs*/
 .story__article::after,
 .story h2::after,
-#studio h2::before,
-#studio h2::after,
 .site-footer::before,
 .site-footer::after,
-.site-footer ul::after {
+.site-footer ul::after,
+#studio h2::before,
+#studio h2::after {
   animation: rotate-flowers 10s infinite linear;
   /* Ajoute l'animation de rotation non stop */
 }
@@ -103,13 +103,3 @@ section, footer{
   background-image: url("/wp-content/themes/foce/assets/images/orange_characters_bg.png");
 }
 
-/* changgement de fond article #place*/
-.story #place {
-  background-image: url("images/Studio_Koukaki-image_place.png");
-  background-size: cover;
-}
-
-#studio {
-  overflow: hidden;
-  margin-top: 0px;
-}

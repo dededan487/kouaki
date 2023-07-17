@@ -3,7 +3,7 @@
 
     //mouvement des nuages
     function parallaxClouds() {
-      var scrollTop = $(window).scrollTop(); // Position de défilement actuelle (représente le nombre de pixels défilés depuis le haut de la page.)
+      var scrollTop = $(window).scrollTop(); // Recupere position de défilement actuelle (représente le nombre de pixels défilés depuis le haut de la page.)
       var cloud1 = $('#grd_nuage'); // Sélection du grand nuage
       var cloud2 = $('#ptit_nuage'); // Sélection du petit nuage
 
@@ -17,15 +17,15 @@
 
       // Appliquer le déplacement aux nuages
       cloud1.css('transform', 'translateX(' + cloud1Offset + 'px)'); //modifie la propriété CSS transform
-      cloud2.css('transform', 'translateX(' + cloud2Offset + 'px)');
+      cloud2.css('transform', 'translateX(' + cloud2Offset + 'px)'); //méthode .css() de jQuery  pour appliquer les déplacements 
     }
 
     // Associe la fonction de mouvement des nuages à l'événement de défilement
     $(window).scroll(function() { 
-      parallaxClouds();
+      parallaxClouds(); // sera appelée pour mettre à jour la position des nuages en fonction du défilement.
     });
 
-    // Appeler la fonction une fois au chargement de la page pour positionner les nuages correctement
+    //  positionner correctement les nuages dès le départ au chargement de la page
     parallaxClouds();
   });
 })(jQuery); // appel de la bibliotheque jQuery
